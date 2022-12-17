@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <div class="main-container">
+            <h2 class="title">Rock Paper Scissors</h2>
+            <div>
+                <img src="./img/icon-game.png" alt="Game Icon">
+            </div>
+            <div class="start-button" onclick="start()">START</div>
+        </div>
+    </div>
+    <div id="board" hidden>
+        <div class="game-container">
+            <div class="reset" onclick="reset()">&lt;&lt;</div>
+            <h3 class="title">Your hand</h3>
+
+            <div class="hand-container">
+                <img src="./img/paper.png" alt="Paper" class="hand-icon" onclick="choose(3)">
+                <img src="./img/rock.png" alt="Roxk" class="hand-icon" onclick="choose(2)">
+                <img src="./img/scissors.png" alt="Scissors" class="hand-icon" onclick="choose(1)">
+            </div>
+
+            <div class="choose-hand">
+                <img id="yourHand" src="./img/question.png" alt="Paper" class="choose-hand-icon">
+            </div>
+            
+            <h1 class="title">VS</h1>
+
+            <div class="choose-hand">
+                <img id="opponentsHand" src="./img/question.png" alt="Paper" class="choose-hand-icon">
+            </div>
+            <h3 class="title">Opponent's hand</h3>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="script.js"></script>
