@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=line-clamp"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="api.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body class="bg-gray-800 text-white">
+    <div id="mainContainer">
+        <nav class="fixed top-0 left-0 right-0 flex flex-row justify-between items-center py-4 px-6 bg-gray-800 rounded-b-xl drop-shadow-lg z-50">
+            <a href="/">
+                <span class="text-2xl font-medium">YAL</span>
+            </a>
+            <div class="flex flex-row">
+                <a class="mx-2 p-2 hover:bg-gray-200 hover:text-gray-800 rounded-md" href="/">
+                    Home
+                </a>
+                <a class="mx-2 p-2 hover:bg-gray-200 hover:text-gray-800 rounded-md" href="/upcoming.html">
+                    Upcoming
+                </a>
+                <a class="mx-2 p-2 hover:bg-gray-200 hover:text-gray-800 rounded-md" href="/currently-airing.html">
+                    Currently Airing
+                </a>
+            </div>
+        </nav>
+        <div id="topContainer" class="mt-28 mb-4 mx-4 p-4 text-white">
+            <div class="p-2 font-base text-3xl">
+                Currently Top
+            </div>
+            <div class="flex flex-row overflow-auto">
+                <div id="top" class="flex flex-row justify-start">
+                </div>
+            </div>
+        </div>
+        <div id="upcomingContainer" class="mt-8 mb-4 mx-4 p-4 text-white">
+            <div class="p-2 font-base text-3xl">
+                Upcoming
+            </div>
+            <div class="flex flex-row overflow-auto">
+                <div id="upcoming" class="flex flex-row justify-start">
+                </div>
+            </div>
+        </div>
+        <div id="airingContainer" class="mt-8 mb-4 mx-4 p-4 text-white">
+            <div class="p-2 font-base text-3xl">
+                This Season
+            </div>
+            <div class="flex flex-row">
+                <div id="airing" class="flex flex-row flex-wrap justify-between">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(() => {
+        setHorizontalSection('#top', 'top');
+        setHorizontalSection('#upcoming', 'up');
+        setHorizontalSection('#airing', 'air');
+    });
+</script>
